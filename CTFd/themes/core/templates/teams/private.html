@@ -8,7 +8,7 @@
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h2 class="modal-action text-center w-100">Edit Team</h2>
+					<h2 class="modal-action text-center w-100">Editar Time</h2>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
@@ -55,7 +55,7 @@
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h2 class="modal-action text-center w-100">Choose Captain</h2>
+					<h2 class="modal-action text-center w-100">Escolher Capitão</h2>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
@@ -86,7 +86,7 @@
 			<h1 id="team-id" team-id="{{ team.id }}">{{ team.name }}</h1>
 			{% if team.oauth_id %}
 				<a href="https://majorleaguecyber.org/t/{{ team.name }}">
-					<h3><span class="badge badge-primary">Official</span></h3>
+					<h3><span class="badge badge-primary">Oficial</span></h3>
 				</a>
 			{% endif %}
 			{% if team.affiliation %}
@@ -109,14 +109,14 @@
 				{% if scores_visible() %}
 					{% if place %}
 						{{ place }}
-						<small>place</small>
+						<small>posição</small>
 					{% endif %}
 				{% endif %}
 			</h2>
 			<h2 id="team-score" class="text-center">
 				{% if score %}
 					{{ score }}
-					<small>points</small>
+					<small>pontos</small>
 				{% endif %}
 			</h2>
 			<div class="pt-3">
@@ -164,7 +164,7 @@
 
 			{% if score_frozen %}
 				<div class="row">
-					<h1 class="text-center">Scoreboard has been frozen.</h1>
+					<h1 class="text-center">Placar congelado.</h1>
 				</div>
 			{% endif %}
 
@@ -172,12 +172,12 @@
 
 			<div class="row min-vh-25">
 				<div class="col-md-12">
-					<h3>Members</h3>
+					<h3>Membros</h3>
 					<table class="table table-striped">
 						<thead>
 						<tr>
-							<td><b>User Name</b></td>
-							<td><b>Score</b></td>
+							<td><b>Usuário</b></td>
+							<td><b>Pontuação</b></td>
 						</tr>
 						</thead>
 						<tbody>
@@ -188,7 +188,7 @@
 										{{ member.name }}
 									</a>
 									{% if team.captain_id == member.id %}
-										<span class="badge badge-primary ml-2">Captain</span>
+										<span class="badge badge-primary ml-2">Capitão</span>
 									{% endif %}
 								</td>
 								<td>{{ member.score }}</td>
@@ -230,7 +230,7 @@
 				{% if awards %}
 					<div class="row">
 						<div class="col-md-12">
-							<h3>Awards</h3>
+							<h3>Troféus</h3>
 						</div>
 						{% for award in awards %}
 							<div class="col-md-3 col-sm-6">
@@ -251,14 +251,14 @@
 
 				<div class="row">
 					<div class="col-md-12">
-						<h3>Solves</h3>
+						<h3>Soluções</h3>
 						<table class="table table-striped">
 							<thead>
 							<tr>
-								<td><b>Challenge</b></td>
-								<td class="d-none d-md-block d-lg-block"><b>Category</b></td>
-								<td><b>Value</b></td>
-								<td><b>Time</b></td>
+								<td><b>Desafio</b></td>
+								<td class="d-none d-md-block d-lg-block"><b>Categoria</b></td>
+								<td><b>Valor</b></td>
+								<td><b>Tempo</b></td>
 							</tr>
 							</thead>
 							<tbody>
@@ -283,7 +283,7 @@
 			{% else %}
 				<div class="row min-vh-25">
 					<h3 class="opacity-50 text-center w-100 justify-content-center align-self-center">
-						No solves yet
+						Ainda sem soluções
 					</h3>
 				</div>
 			{% endif %}

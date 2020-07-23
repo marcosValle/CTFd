@@ -62,7 +62,7 @@ def join():
         if team_size_limit:
             plural = "" if team_size_limit == 1 else "s"
             infos.append(
-                "Teams are limited to {limit} member{plural}".format(
+                "Times estão limitados a {limit} membro{plural}".format(
                     limit=team_size_limit, plural=plural
                 )
             )
@@ -78,7 +78,7 @@ def join():
             team_size_limit = get_config("team_size", default=0)
             if team_size_limit and len(team.members) >= team_size_limit:
                 errors.append(
-                    "{name} has already reached the team size limit of {limit}".format(
+                    "{name} já atingiu o tamanho limite de membros de {limit}".format(
                         name=team.name, limit=team_size_limit
                     )
                 )
@@ -99,7 +99,7 @@ def join():
 
             return redirect(url_for("challenges.listing"))
         else:
-            errors.append("That information is incorrect")
+            errors.append("Informação incorreta")
             return render_template("teams/join_team.html", infos=infos, errors=errors)
 
 
@@ -114,7 +114,7 @@ def new():
         if team_size_limit:
             plural = "" if team_size_limit == 1 else "s"
             infos.append(
-                "Teams are limited to {limit} member{plural}".format(
+                "Times estão limitados a {limit} membro{plural}".format(
                     limit=team_size_limit, plural=plural
                 )
             )

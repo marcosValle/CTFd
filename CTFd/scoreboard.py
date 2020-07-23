@@ -16,7 +16,7 @@ def listing():
     infos = get_infos()
 
     if config.is_scoreboard_frozen():
-        infos.append("Scoreboard has been frozen")
+        infos.append("Placar congelado")
 
     standings = get_standings()
     return render_template("scoreboard.html", standings=standings, infos=infos)

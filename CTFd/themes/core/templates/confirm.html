@@ -15,13 +15,13 @@
 				{% include "components/errors.html" %}
 
 				<h3 class="text-center">
-					We've sent a confirmation email to your email address.
+				   Enviamos um e-mail de confirmação.
 				</h3>
 
 				<br>
 
 				<h4 class="text-center">
-					Please click the link in that email to confirm your account.
+					Por favor clique no link do email para confirmar sua conta.
 				</h4>
 
 				<hr>
@@ -29,7 +29,7 @@
 				{% with form = Forms.auth.ConfirmForm() %}
 				<form method="POST" action="{{ url_for('auth.confirm') }}">
 					<h4 class="text-center">
-						Need to resend the confirmation email?
+						Deseja que seja reenviado o email de confirmação?
 					</h4>
 					<div class="col-md-12 text-center">
 						{{ form.submit(class="btn btn-md btn-primary btn-outlined") }}
